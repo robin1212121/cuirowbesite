@@ -38,13 +38,19 @@ header {
 .menu-toggle {
   display: none;
   font-size: 28px;
-  cursor: pointer;
   color: #04347c;
   background: none;
   border: none;
 }
 
-main, section {
+main {
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section:not(.gele-vlak) {
   padding: 20px;
   box-sizing: border-box;
   max-width: 1200px;
@@ -64,14 +70,16 @@ h2 {
 }
 
 .gele-vlak {
-  background: #FFD500;
-  margin-top: 20px;
-  padding: 20px;
+  width: 100vw;
+  background: #FFCC00;
+  margin: 20px 0 0 0;
+  padding: 40px 0;
 }
 
-.gele-vlak h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.gele-vlak .gele-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .locatie-container {
@@ -95,11 +103,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.locatie:hover, .vak:hover, .docent:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .locatie img, .docent img {
